@@ -36,4 +36,4 @@ A matchday is made up of the following attributes:
 
 ## Database schema
 
-<img src="https://github.com/pankratz117/matchday/blob/master/db/db_schema_image.png" width="100" >
+<img src="https://github.com/pankratz117/matchday/blob/master/db/db_schema_image.png" width="1000" >
