@@ -35,3 +35,5 @@ A matchday is made up of the following attributes:
 - score_team_blue
 
 ## Database schema
+
+<img src="https://github.com/pankratz117/matchday/blob/master/db/db_schema_image.png" width="100" >
