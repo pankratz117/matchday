@@ -1,0 +1,2 @@
+class SportsGround < ApplicationRecord
+end
