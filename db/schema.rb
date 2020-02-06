@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_06_102148) do
+ActiveRecord::Schema.define(version: 2020_02_06_104146) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "matchdays", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "sport_type"
+    t.date "date"
+    t.integer "red_score"
+    t.integer "blue_score"
+    t.string "mode"
+    t.bigint "sports_ground_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["sports_ground_id"], name: "index_matchdays_on_sports_ground_id"
+    t.index ["user_id"], name: "index_matchdays_on_user_id"
+  end
 
   create_table "sports_grounds", force: :cascade do |t|
     t.string "name"
@@ -39,4 +53,6 @@ ActiveRecord::Schema.define(version: 2020_02_06_102148) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "matchdays", "sports_grounds"
+  add_foreign_key "matchdays", "users"
 end
