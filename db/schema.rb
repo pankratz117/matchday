@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 2020_02_06_112415) do
     t.bigint "user_id", null: false
     t.string "sport_type"
     t.date "date"
-    t.integer "red_score"
-    t.integer "blue_score"
+    t.integer "red_score", default: 0, null: false
+    t.integer "blue_score", default: 0, null: false
     t.string "mode"
     t.bigint "sports_ground_id", null: false
     t.datetime "created_at", precision: 6, null: false
