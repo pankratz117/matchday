@@ -1,0 +1,8 @@
+<div class="container">
+  <% @matchdays.each do |matchday|%>
+    <%= matchday.sport_type %>
+    <%= matchday.date %>
+    <%= matchday.mode %>
+    <%= matchday.sports_ground.name %>
+  <% end %>
+</div>
