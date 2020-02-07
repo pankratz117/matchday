@@ -27,6 +27,6 @@ group :development, :test do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '4.0.0.beta3'
   gem 'faker', '~> 2.10', '>= 2.10.1'
 end
