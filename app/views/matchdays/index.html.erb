@@ -4,6 +4,7 @@
     <%= matchday.date %> <br />
     <%= matchday.date %> <br />
     <%= matchday.mode %> <br />
-    <%= matchday.sports_ground.name %> <br /><br /><br /><br />
+    <%= matchday.sports_ground.name %> <br />
+    <%= link_to 'Details', matchday_path(matchday) %><br /><br /><br />
   <% end %>
 </div>
