@@ -5,5 +5,6 @@ class MatchdaysController < ApplicationController
 
   def show
     @matchday = Matchday.find(params[:id])
+    @spots = @matchday.spots
   end
 end

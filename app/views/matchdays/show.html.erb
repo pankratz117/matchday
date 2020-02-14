@@ -3,4 +3,13 @@
 <h2>Date: <%= @matchday.date %><h2>
 <h2>Sports Ground: <%= @matchday.sports_ground.name %><h2>
 <h2>Capitan: <%= @matchday.user.username %></h2>
+<h4>-----</h4>
+<% @spots.each do |spot| %>
+  <% if(spot.team_red) %>
+    <h4><%= spot.user.username %> (team red)</h4>
+  <% else %>
+    <h4><%= spot.user.username %> (team blue)</h4>
+  <% end %>
+<% end %>
+<br>
 <%= link_to 'Back', matchdays_path %>
