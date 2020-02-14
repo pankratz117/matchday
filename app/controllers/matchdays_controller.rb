@@ -10,11 +10,13 @@ class MatchdaysController < ApplicationController
 
   def new
     @matchday = Matchday.new
+    @sports_grounds = SportsGround.all
   end
 
   def create
     @matchday = Matchday.new(matchday_params)
-    @matchday.save
+    @matchday.user = current_user
+    @matchday.save!
 
     redirect_to matchday_path(@matchday)
   end
