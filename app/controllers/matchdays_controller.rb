@@ -26,6 +26,6 @@ class MatchdaysController < ApplicationController
   private
 
   def matchday_params
-    params.require(:matchday).permit(:authenticity_token, :user, :sport_type, :date, :red_score, :blue_score, :mode, :sports_ground, :sports_ground_id)
+    params.require(:matchday).permit(:user, :sport_type, :date, :red_score, :blue_score, :mode, :sports_ground_id)
   end
 end
